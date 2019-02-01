@@ -131,22 +131,17 @@ def count_primes(m,n):
         if n>m:
             total = 0
             for k in range(m,n+1,1):
-                if is_prime(n)==True:
-                    if is_prime (m)==True:
- #                       total=n-m
-                        print(k)
-                  #  total=number of printed k's
- #test_count_primes(n)-test_count_primes(m)
-  #  print(test_count_primes(n))
-   #                     print(test_count_primes (m))
-                        print (total)
+                if is_prime(k)==True:
+                    print(k + m)
+                    total = total + 1
+
+            return total
  #                   else:
   #                      print('False')
    #             else:
     #                print('False')
 
-            return total
-    return
+
 
 
 def test_multiply_primes():
