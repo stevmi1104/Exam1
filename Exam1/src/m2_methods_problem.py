@@ -75,7 +75,7 @@ def test_count_primes():
     print()
     print('Test 2 of count primes')
     print('m = 20 and n = 22')
-    print('Expected count = 2')
+    print('Expected count = 0')
     print('Actual count = ', count_primes(20, 22))
 
     print()
