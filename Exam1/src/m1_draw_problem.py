@@ -91,12 +91,30 @@ def test_draw_a_picture():
 #         renders with a half-second pause after rendering.
 ############################################################################
 # -------------------------------------------------------------------------
-#
+#Draws an rg.Circle with the given point as the center.
+#       The color is used as the fill-color of the circle
+#       The circle has a radius of 50 pixels
+#       The program draws n additional rg.Circles
+#       on the given rg.RoseWindow such that:
+#       -- The center of the leftmost circle is at the given point
+#          Each new circle has a center located 25 pixels to the right
+#          and 15 pixels down from the center of the last circle
+#          This should form a "diagonal line" of circles
+#          The test calls have been written for you in main
+#       -- There is a 0.5 second pause after each rg.Circle is drawn.
+#       Must  ** NOT close **   the window.
 #
 
 def draw_a_picture(point, n, color, window):
-
-    return
-
-
+    for k in range (n+1):
+        total=k
+        if total<=n:
+            point.x = point.x + 25
+            point.y = point.y + 15
+            circle=rg.Circle(rg.Point(point.x,point.y),50)
+            circle.fill_color= color
+            circle.attach_to(window)
+            window.render(0.5)
+    return total
+    window.continue_on_mouse_click()
 main()
