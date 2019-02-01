@@ -196,12 +196,12 @@ def multiply_primes(m,n):
     ###############################################################################
 #if m >0:
     if n > m:
-        answer=0
+        answer=1
         for k in range (m,n+1):
-            answer=count_primes(m,k)*count_primes(k,n)
-            print(answer)
-            print(m)
-            print(n)
-#        return answer
+            if is_prime(k):
+
+                answer = answer * (k)
+
+        return answer
 
 main()
