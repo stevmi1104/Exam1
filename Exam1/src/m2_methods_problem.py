@@ -203,5 +203,5 @@ def multiply_primes(m,n):
                 answer = answer * (k)
 
         return answer
-
+print ('something')
 main()
